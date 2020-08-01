@@ -31,9 +31,9 @@ const style: any = {
     },
 }
 
-export const Header = () => {
+export const Header: React.FC<any> = () => {
     return (
-        <div>
+        <div style={{width: '100%', height: '80px'}}>
             <h2 style={style.logo}>Retro<span style={style.logoText}>Museum</span></h2>
             <div className="menu">
                 <div style={style.menuIcon}></div>
