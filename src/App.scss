@@ -1,0 +1,12 @@
+.menu {
+    float: right;
+    display: flex;
+    width: 85px;
+    height: 40px;
+    align-items: center;
+    margin: 22px 20px;
+    padding: 5px;
+        &:hover {
+            background-color: lighten($color: #303030, $amount: 40);
+        }
+}
