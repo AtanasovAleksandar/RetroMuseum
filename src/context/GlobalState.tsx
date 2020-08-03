@@ -13,7 +13,33 @@ const initialState = {
       horsePower: 95,
       cubics: 1670,
       color: 'C5ECEE',
-      presentationUrl: 'https://cdn.pixabay.com/photo/2017/08/20/13/29/isolated-2661718_960_720.png'
+      presentationUrl: 'https://cdn.pixabay.com/photo/2017/08/20/13/29/isolated-2661718_960_720.png',
+      owners: [
+        {
+          id: 7,
+          name: 'Sue' ,
+          year: '1996',
+          country: 'Macedonia'
+        },
+        {
+          id: 8,
+          name: 'Barb' ,
+          year: '1992',
+          country: 'USA'
+        },
+        {
+          id: 9,
+          name: 'Aorc' ,
+          year: '1992',
+          country: 'USA'
+        },
+        {
+          id: 10,
+          name: 'Dord' ,
+          year: '1992',
+          country: 'USA'
+        }
+      ]
     },
     {
       id: 2,
@@ -24,18 +50,46 @@ const initialState = {
       horsePower: 100,
       cubics: 1800,
       color: 'FBCCB6 ',
-      presentationUrl: 'https://www.wedding-car.co.uk/images/cars/vintage-citroen-dorothy/main-image/dorothy.png'
+      presentationUrl: 'https://www.wedding-car.co.uk/images/cars/vintage-citroen-dorothy/main-image/dorothy.png',
+      owners: [
+        {
+          id: 5,
+          name: 'Jim' ,
+          year: '1996',
+          country: 'Macedonia'
+        },
+        {
+          id: 6,
+          name: 'Sue' ,
+          year: '1992',
+          country: 'USA'
+        }
+      ]
     },
     {
       id: 3,
       model: "Porsche 911",
-       imgUrl: "https://lh3.googleusercontent.com/proxy/MVZKyYdLRn4RcvK5unBOieMtlr4D_5mGAwOrbWba9Iwuh9RoXJM7jKOitwzPfQHKksFRNtSoHcC9K_RglIZo_vwIf9xOFa7LLh74Iu9sTHVJ0o-Lr5K6DWoHrDogGkBrCF3Jpnj4ZfGLHw",
+       imgUrl: "https://cdn.pixabay.com/photo/2017/03/11/14/54/buick-2135196_960_720.png",
       description: "The Porsche 911 represents vintage driving at its best—particularly during the golden era before the car's 1974 redesign.",
       manufactureYear: 1962,
       horsePower: 113,
       cubics: 1900,
       color: 'B8D9F7',
-      presentationUrl: 'https://i.ibb.co/RPpr9y6/6-65223-classic-cars-png-vintage-car-png.png'
+      presentationUrl: 'https://i.ibb.co/RPpr9y6/6-65223-classic-cars-png-vintage-car-png.png',
+      owners: [
+        {
+          id: 1,
+          name: 'Max' ,
+          year: '1996',
+          country: 'Macedonia'
+        },
+        {
+          id: 2,
+          name: 'Sam' ,
+          year: '1992',
+          country: 'USA'
+        }
+      ]
     },
     {
       id: 4,
@@ -46,7 +100,21 @@ const initialState = {
       horsePower: 200,
       cubics: 2400,
       color: 'EDE7DF',
-      presentationUrl: 'https://i.ibb.co/xmHWGrq/138-1387745-style-classic-vintage-retro-cars-car-clipart-vintage.png'
+      presentationUrl: 'https://i.ibb.co/xmHWGrq/138-1387745-style-classic-vintage-retro-cars-car-clipart-vintage.png',
+      owners: [
+        {
+          id: 3,
+          name: 'Ace' ,
+          year: '1996',
+          country: 'Macedonia'
+        },
+        {
+          id: 4,
+          name: 'David' ,
+          year: '1992',
+          country: 'USA'
+        }
+      ]
     },
   ],
 };
@@ -70,12 +138,20 @@ export const GlobalProvider = ({ children }) => {
       })
   }
 
+  // const findOwner = (input) => {
+  //   dispatch({
+  //     type: 'FIND_OWNER',
+  //     payload: input
+  //   })
+  // }
+
   return (
     <GlobalContext.Provider
       value={{
         cars: state.cars,
         selectCar,
-        reset
+        reset,
+        // findOwner
       }}
     >
       {children}
