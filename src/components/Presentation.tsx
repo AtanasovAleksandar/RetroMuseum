@@ -3,11 +3,11 @@ import React from 'react'
 import { ManufactureInfo } from '../components/manufactureInfo';
 
 
-export const Presentation: React.FC<any>  = ({imgUrl}) => {
+export const Presentation: React.FC<any>  = ({context}) => {
     return (
         <div className="presentation-container">
-            < ManufactureInfo />
-            <img className="presentation-container-img" src={imgUrl} alt="car"/>
+            < ManufactureInfo context={context}/>
+            <img className="presentation-container-img" src={context.presentationUrl} alt="car"/>
         </div>
     )
 }

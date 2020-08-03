@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
 
-export const InfoSection: React.FC<any> = ({title, details}) => {
-    return (
+import { Presentation } from "../components/Presentation";
+
+export const InfoSection: React.FC<any> = ({context}) => {
+    console.log(context)
+
+  return (
+      <>
         <div className="info-section">
-            <h2 style={{fontSize: '40px'}}>{title}</h2>
-            <span>{details}</span>
-            <button className="info-button">Learn More</button>
+           {/* {car ? <button onClick={}>Back</button> : null} */}
+          <h2 style={{ fontSize: "40px" }}>{context?.model}</h2>
+          <span>{context?.description}</span>
+          <button className="info-button">Owners</button>
         </div>
-    )
-}
+        <div>
+        <Presentation context={context}/>
+        </div>
+        </>
+      )
+};
