@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 import { Table } from "../components/Table";
-import { Form } from "../components/Form";
+import { AddForm } from "./AddForm";
 
 export const Modal = ({ onCloseModal, context }) => {
     console.log('modal',context)
@@ -14,18 +14,18 @@ export const Modal = ({ onCloseModal, context }) => {
         <Tabs>
           <TabList>
             <Tab>Owners</Tab>
-            <Tab>Add/Edit Owner</Tab>
+            <Tab>Add Owner</Tab>
           </TabList>
 
           <TabPanel>
             <Table owners={context.owners}/>
           </TabPanel>
           <TabPanel>
-            <Form />
+            <AddForm owners={context.owners}/>
           </TabPanel>
         </Tabs>
       </div>
-      <button className="modal-btn-close" onClick={onCloseModal}>
+      <button className="modal-btn-close btn-close-modal" onClick={onCloseModal}>
         Close
       </button>
     </div>

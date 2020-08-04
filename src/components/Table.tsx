@@ -1,13 +1,28 @@
 import React, {useState} from "react";
+import {EditModal} from '../components/EditModal';
 
 export const Table = ({ owners }) => {
+  const [modalActive , setModalActive] = useState(false)
   const [ownerCars , setOwnerCars ]  = useState(owners)
+  const [ownerForEdit , setOwnerForEdit] = useState(null)
   let carOwners: any[] = owners
   console.log('carOwners',carOwners)
 
+  const onModalClose = () => {
+    setModalActive(false)
+  }
+
+  const changeUpdatedOwner = (e) => {
+    console.log(e)
+    ownerCars.filter(owner => owner.id === e.id).map(o => {
+      o.name = e.name
+      o.year = e.year
+      o.country = e.country
+    })
+  }
 
   const getSuggestions = (value) => {
-  
+
     if (value === '') {
       setOwnerCars(owners)
     } else {
@@ -17,6 +32,7 @@ export const Table = ({ owners }) => {
   }
 
   const checkIfContain = (owner, value) => {
+
     let contain = owner.name.toUpperCase().includes(value.toUpperCase())
       if (contain) {
         carOwners = []
@@ -30,13 +46,18 @@ export const Table = ({ owners }) => {
    getSuggestions(e.target.value)
   }
 
+  const onEdit = (owner) => {
+    setModalActive(true)
+    setOwnerForEdit(owner)
+  }
+
   return (
     <>
       <div className="search">
         <input
           type="text"
           className="searchTerm"
-          placeholder="Type owner name"
+          placeholder="Search owner name..."
           onChange={onSearchTermsEntered}
         />
       </div>
@@ -46,6 +67,7 @@ export const Table = ({ owners }) => {
             <th>Name</th>
             <th>Year</th>
             <th>Country</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -54,10 +76,12 @@ export const Table = ({ owners }) => {
               <td>{owner.name}</td>
               <td>{owner.year}</td>
               <td>{owner.country}</td>
+              <td style={{width: '250px'}}><button className="edit-btn" onClick={() => onEdit(owner)}>Edit</button></td>
             </tr>
           ))}
         </tbody>
       </table>
+      {modalActive ? <EditModal forEdit={ownerForEdit} onCloseModal={onModalClose} editedOwner={changeUpdatedOwner}/> : null}
     </>
   );
 };

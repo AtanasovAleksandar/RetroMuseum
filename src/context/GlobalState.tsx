@@ -16,25 +16,25 @@ const initialState = {
       presentationUrl: 'https://cdn.pixabay.com/photo/2017/08/20/13/29/isolated-2661718_960_720.png',
       owners: [
         {
-          id: 7,
+          id: 0,
           name: 'Sue' ,
           year: '1996',
           country: 'Macedonia'
         },
         {
-          id: 8,
+          id: 1,
           name: 'Barb' ,
           year: '1992',
           country: 'USA'
         },
         {
-          id: 9,
+          id: 2,
           name: 'Aorc' ,
           year: '1992',
           country: 'USA'
         },
         {
-          id: 10,
+          id: 3,
           name: 'Dord' ,
           year: '1992',
           country: 'USA'
@@ -53,13 +53,13 @@ const initialState = {
       presentationUrl: 'https://www.wedding-car.co.uk/images/cars/vintage-citroen-dorothy/main-image/dorothy.png',
       owners: [
         {
-          id: 5,
+          id: 0,
           name: 'Jim' ,
           year: '1996',
           country: 'Macedonia'
         },
         {
-          id: 6,
+          id: 1,
           name: 'Sue' ,
           year: '1992',
           country: 'USA'
@@ -78,13 +78,13 @@ const initialState = {
       presentationUrl: 'https://i.ibb.co/RPpr9y6/6-65223-classic-cars-png-vintage-car-png.png',
       owners: [
         {
-          id: 1,
+          id: 0,
           name: 'Max' ,
           year: '1996',
           country: 'Macedonia'
         },
         {
-          id: 2,
+          id: 1,
           name: 'Sam' ,
           year: '1992',
           country: 'USA'
@@ -103,13 +103,13 @@ const initialState = {
       presentationUrl: 'https://i.ibb.co/xmHWGrq/138-1387745-style-classic-vintage-retro-cars-car-clipart-vintage.png',
       owners: [
         {
-          id: 3,
+          id: 0,
           name: 'Ace' ,
           year: '1996',
           country: 'Macedonia'
         },
         {
-          id: 4,
+          id: 1,
           name: 'David' ,
           year: '1992',
           country: 'USA'
@@ -131,6 +131,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  const addOwner: any = (owner, owners) => {
+    dispatch({
+      type: "ADD_OWNER",
+    payload: {owners, owner}
+    })
+  }
+
   const reset: any = () => {
       dispatch({
           type: 'RESET',
@@ -150,6 +157,7 @@ export const GlobalProvider = ({ children }) => {
       value={{
         cars: state.cars,
         selectCar,
+        addOwner,
         reset,
         // findOwner
       }}

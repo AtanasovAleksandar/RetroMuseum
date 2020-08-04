@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const ManufactureInfo = ({context}) => {
-    console.log(context)
     return (
         <div className="manufacture-info">
             <div>

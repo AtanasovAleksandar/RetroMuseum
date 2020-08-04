@@ -1,215 +1,307 @@
 .menu {
-    float: right;
-    display: flex;
-    width: 85px;
-    height: 40px;
-    align-items: center;
-    margin: 22px 20px;
-    padding: 5px;
+  float: right;
+  display: flex;
+  width: 85px;
+  height: 40px;
+  align-items: center;
+  margin: 22px 20px;
+  padding: 5px;
 
-    &:hover {
-        color: white;
-        cursor: pointer;
-        background-color: lighten($color: #303030, $amount: 40);
-    }
+  &:hover {
+    color: white;
+    cursor: pointer;
+    background-color: lighten($color: #303030, $amount: 40);
+  }
 }
 
 .card-shape {
-    position: relative;
-    z-index: 0;
-    width: 200px;
-    height: 180px;
-    border-radius: 50%;
-    transition: transform .2s;
+  position: relative;
+  z-index: 0;
+  width: 200px;
+  height: 180px;
+  border-radius: 50%;
+  transition: transform .2s;
 
-    &:hover {
-        background-color: red;
-        transform: scale(1.2);
-    }
+  &:hover {
+    background-color: red;
+    transform: scale(1.2);
+  }
 }
 
 .cars {
-    position: absolute;
-    z-index: 1;
-    width: 210px;
-    height: 185px;
-    bottom: -40px;
-    left: -20px;
+  position: absolute;
+  z-index: 1;
+  width: 210px;
+  height: 185px;
+  bottom: -40px;
+  left: -20px;
 }
 
 .cars-container {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 70px;
-    position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 70px;
+  position: relative;
 }
 
 .card-title {
-    font-size: 28px;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    font-weight: 700;
+  font-size: 28px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  font-weight: 700;
 }
 
 .info-section {
-    margin: 90px;
-    margin-top: 70px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
+  margin: 90px;
+  margin-top: 70px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-button {
-    width: 200px;
-    height: 80px;
-    border: 2px solid black;
-    background-color: transparent;
-    border-radius: 25px;
-    font-size: 22px;
-    margin-top: 25px;
+  width: 200px;
+  height: 80px;
+  border: 2px solid black;
+  background-color: transparent;
+  border-radius: 25px;
+  font-size: 22px;
+  margin-top: 25px;
 
-    &:hover {
-        cursor: pointer;
-        color: white;
-        background-color: lighten($color: #303030, $amount: 40);
-    }
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: lighten($color: #303030, $amount: 40);
+  }
 }
 
 .presentation-container {
-    width: 100%;
-    height: 330px;
-    background-color: #47474710;
-    position: relative;
+  width: 100%;
+  height: 430px;
+  background-color: #47474710;
+  position: relative;
 
-    &-year {
-        position: absolute;
-        font-size: 200px;
-        right: 300px;
-        top: -475px;
-        opacity: 0.5;
-    }
+  &-year {
+    position: absolute;
+    font-size: 200px;
+    right: 300px;
+    top: -475px;
+    opacity: 0.5;
+  }
 
-    &-img {
-        position: absolute;
-        right: 240px;
-        width: 40%;
-        top: -55%;
-    }
+  &-img {
+    position: absolute;
+    right: 240px;
+    width: 40%;
+    top: -40%;
+  }
 }
 
 .manufacture-info {
-    display: flex;
-    margin-left: 80px;
-    width: 25%;
-    justify-content: space-between;
+  display: flex;
+  margin-left: 80px;
+  width: 25%;
+  justify-content: space-between;
 }
 
 .description-container {
-    width: 100%;
-    height: 307px;
-    position: relative;
+  width: 100%;
+  height: 307px;
+  position: relative;
 }
 
 .modal {
+  position: absolute;
+  background-color: #E4E5E7;
+  box-shadow: 0px 1px 20px 5px #949494;
+  width: 80%;
+  height: 630px;
+  top: -285px;
+  left: 10%;
+
+  &-btn-close {
+    float: right;
+    margin-right: 20px;
+    margin-top: 12px;
     position: absolute;
-    background-color: #E4E5E7;
-    box-shadow: 0px 1px 20px 5px #949494;
-    width: 80%;
-    height: 630px;
-    top: -285px;
-    left: 10%;
-        &-btn-close {
-            float: right;
-            margin-right: 20px;
-            margin-top: 20px;
-            position: absolute;
-            top: 0px;
-            right: 20px;
-        }
+    top: 0px;
+    right: 20px;
+  }
+}
+
+.modal-edit {
+  position: absolute;
+  background-color: #E4E5E7;
+  box-shadow: 0px 1px 20px 5px #949494;
+  width: 60%;
+  height: 340px;
+  top: 20%;
+  left: 22%;
+
+  &-btn-close {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
 }
 
 
 .owners {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 98%;
-    margin: 10px 10px;
-  }
-  
-  .owners td, .owners th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .owners tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .owners tr:hover {background-color: #ddd;}
-  
-  .owners th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color:#036e73;
-    color: white;
-  }
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+  margin: 10px 10px;
+}
 
-  .tabs {
-    cursor: pointer;
-    margin: 10px 10px;
-    height: 30px;
-    width: 135px;
-    text-align: center;
-    padding-top: 8px;
-        &:hover {
-            background-color: lighten($color: #303030, $amount: 40);
-        }
-  }
+.owners td,
+.owners th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-  .active {
-    background-color: #d35e28;
-    color: white;
-  }
+.owners tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-  .search {
-    width: 20%;
-    position: relative;
-    display: flex;
-    margin-left: 10px;
-    margin-top: 25px;
-  }
-  
-  .searchTerm {
-    width: 100%;
-    border: 3px solid white;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: black;
-  }
-  
-  .searchTerm:focus{
-    color: black;
-  }
-  
-  .searchButton {
-    width: 80px;
-    height: 36px;
-    border: 1px solid #036e73;
-    background: #036e73;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 16px;
-  }
+.owners tr:hover {
+  background-color: #ddd;
+}
 
-  .search-autocomplete {
-    background-color: white;
-    width: 305px;
-    height: auto;
-    position: absolute;
-    top: 38px;
-  }
+.owners th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #036e73;
+  color: white;
+}
+
+.search {
+  width: 20%;
+  position: relative;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid white;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus {
+  color: black;
+}
+
+.searchButton {
+  width: 80px;
+  height: 36px;
+  border: 1px solid #036e73;
+  background: #036e73;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-autocomplete {
+  background-color: white;
+  width: 305px;
+  height: auto;
+  position: absolute;
+  top: 38px;
+}
+
+//   forms 
+
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #036E73;
+  color: white;
+  padding: 12px 31px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 15%;
+  margin-top: 14px;
+}
+
+input[type=submit]:hover {
+  background-color: #036E73;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 8%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.edit-btn {
+  background-color: #036E73;
+  color: white;
+  width: 120px;
+  height: 40px;
+  margin: 10px 0px;
+}
+
+.btn-update {
+  width: 90px;
+  height: 35px;
+  float: right;
+  margin-right: 120px;
+  margin-top: 20px;
+  background-color: #036E73;
+  color: white;
+}
+
+.btn-close-modal {
+  width: 80px;
+  height: 30px;
+  background-color: #495152;
+  color: white;
+}

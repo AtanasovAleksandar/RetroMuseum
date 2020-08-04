@@ -4,7 +4,6 @@ import { Presentation } from "../components/Presentation";
 import { Modal } from '../components/Modal';
 
 export const InfoSection: React.FC<any> = ({context}) => {
-    console.log(context)
     const [modalActive , setModalActive] = useState(false)
 
     const onModalClose = () => {
