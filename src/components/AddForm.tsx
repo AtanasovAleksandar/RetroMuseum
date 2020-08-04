@@ -63,7 +63,7 @@ export const AddForm = ({owners}) => {
           </div>
           <div className="col-75">
             <input
-              style={{ width: "102%", height: "35px" }}
+              // style={{ width: "102%", height: "35px" }}
               placeholder="Country"
               list="country"
               name="country"
@@ -80,7 +80,7 @@ export const AddForm = ({owners}) => {
           </div>
         </div>
         <div className="row">
-          <input type="submit" value="Submit" />
+          <input style={{width: '120px'}} type="submit" value="Submit" />
         </div>
       </form>
     </div>
