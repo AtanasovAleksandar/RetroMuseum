@@ -28,6 +28,7 @@ export const AddForm = ({owners}) => {
 
   return (
     <div style={{ padding: "35px", marginLeft: "165px" }}>
+      <h2>Add Owner</h2>
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-25">

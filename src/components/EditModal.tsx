@@ -26,7 +26,8 @@ export const EditModal = ({ forEdit , onCloseModal, editedOwner}) => {
   return (
     <div className="modal-edit">
       <button className="modal-edit-btn-close btn-close-modal" onClick={onCloseModal}>Close</button>
-      <form style={{ marginLeft: "67px", marginTop: "75px" }}>
+      <form style={{ marginLeft: "67px", marginTop: "35px" }}>
+      <h2>Edit Owner</h2>
         <div className="row">
           <div className="col-25">
             <label>Name</label>
@@ -61,7 +62,7 @@ export const EditModal = ({ forEdit , onCloseModal, editedOwner}) => {
           </div>
           <div className="col-75">
             <input
-              style={{ width: "102%", height: "35px" }}
+              style={{ width: "100%", height: "15px" }}
               placeholder="Country"
               list="country"
               name="country"
